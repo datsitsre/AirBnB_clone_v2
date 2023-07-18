@@ -11,6 +11,8 @@ from fabric.api import local, runs_once
 def do_pack():
     """ the Archive code """
     current_time = datetime.utcnow()
+    if os.path.isdir("web_static") is False:
+        local("mkdir -p web_static")
     file = "versions/web_static_{}{}{}{}{}{}.tgz".format(current_time.year,
                                                          current_time.month,
                                                          current_time.day,
