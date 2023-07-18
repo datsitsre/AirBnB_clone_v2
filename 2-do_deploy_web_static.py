@@ -7,34 +7,14 @@ from datetime import datetime
 from fabric.api import local, runs_once
 
 
-@runs_once
-def do_pack():
-    """ the Archive code """
-    current_time = datetime.utcnow()
-    if os.path.isdir("web_static") is False:
-        local("mkdir -p web_static")
-    file = "versions/web_static_{}{}{}{}{}{}.tgz".format(current_time.year,
-                                                         current_time.month,
-                                                         current_time.day,
-                                                         current_time.hour,
-                                                         current_time.minute,
-                                                         current_time.second)
-    if os.path.isdir("versions") is False:
-        if local("mkdir -p versions").failed is True:
-            return None
-    if local("tar -cvzf {} web_static".format(file)).failed is True:
-        return None
-    return file
-
-
 def do_deplay(archive_path):
-    """ 
-        Deplay static files on the host 
+    """
+       Deplay static files on the host
 
-        Args:
-            archive_apth (str): the path of the archive 
-        Returns:
-            If the file doesnt exit 
+       Args:
+            archive_apth (str): the path of the archive
+       Returns:
+            If the file doesnt exit
 
     """
     if os.path.exists("archive_path"):
