@@ -6,8 +6,7 @@ from fabric.api import local, runs_once
 
 
 def do_deplay(archive_path):
-    """
-       Deplay static files on the host
+    """Deplay static files on the host
        Args:
             archive_apth (str): the path of the archive
        Returns:
