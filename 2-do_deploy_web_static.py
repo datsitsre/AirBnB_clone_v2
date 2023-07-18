@@ -29,7 +29,10 @@ def do_pack():
 
 def do_deplay(archive_path):
     """ 
-    Deplay static files on the host 
+        Deplay static files on the host 
+
+        Args:
+            Archive 
 
     """
     if os.path.exists("archive_path"):
