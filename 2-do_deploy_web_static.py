@@ -11,9 +11,9 @@ def do_deploy(archive_path):
     """Archive to a web server.
 
     Args:
-        Archive_path (str): The path of the archive to distribute.
+        Archive_path : The path of the archive to distribute.
     Returns:
-        If the file doesn't exist at archive_path or an error occurs - False.
+        Return archive or False
     """
     if os.path.isfile(archive_path) is False:
         return False
