@@ -10,7 +10,7 @@ from fabric.api import local, runs_once
 @runs_once
 def do_pack():
     """ the Archive code """
-    if no os.path.isdir("versions"):
+    if not os.path.isdir("versions"):
         os.mkdir("versions")
     current_time = datetime.now()
     results = "versions/web_static_{}{}{}{}{}{}.tgz".format(
