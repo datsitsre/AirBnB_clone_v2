@@ -32,7 +32,9 @@ def do_deplay(archive_path):
         Deplay static files on the host 
 
         Args:
-            Archive 
+            archive_apth (str): the path of the archive 
+        Returns:
+            If the file doesnt exit 
 
     """
     if os.path.exists("archive_path"):
