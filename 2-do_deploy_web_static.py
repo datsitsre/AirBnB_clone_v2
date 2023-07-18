@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """ Fabric  to create an archive """
-
-# import libraries
 import os
 from datetime import datetime
 from fabric.api import local, runs_once
