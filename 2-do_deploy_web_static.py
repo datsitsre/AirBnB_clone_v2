@@ -28,7 +28,10 @@ def do_pack():
 
 
 def do_deplay(archive_path):
-    """ Deplay static files on the host """
+    """ 
+    Deplay static files on the host 
+
+    """
     if os.path.exists("archive_path"):
         file_name = os.path.basename(archive_apth)
         dir_name = file_name.replace(".tgz", "")
