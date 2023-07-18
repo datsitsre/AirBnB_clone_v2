@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Set up web deployment
 
 apt-get update
