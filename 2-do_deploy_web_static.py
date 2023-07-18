@@ -10,12 +10,10 @@ from fabric.api import local, runs_once
 def do_deplay(archive_path):
     """
        Deplay static files on the host
-
        Args:
             archive_apth (str): the path of the archive
        Returns:
             If the file doesnt exit
-
     """
     if os.path.exists("archive_path"):
         file_name = os.path.basename(archive_apth)
