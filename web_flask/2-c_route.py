@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # Flask applications to listen on port 50000
+""" Flask app to return a formated word """
 
 from flask import Flask
 
