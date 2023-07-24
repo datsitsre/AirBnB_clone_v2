@@ -32,7 +32,7 @@ between Place and Amenity records.
 """
 
 
-class Place(BaseModel, Base):
+class Place(BaseModel):
     """ A place to stay """
     __tablename__ = 'places'
     city_id = Column(
