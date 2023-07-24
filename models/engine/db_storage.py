@@ -6,11 +6,6 @@ from sqlalchemy import create_engine
 import urllib.parse
 
 from models.base_model import BaseModel, Base
-from models.city import City
-from models.user import User
-from models.place import Place, place_amenity
-from models.amenity import Amenity
-from models.review import Review
 
 
 class DBStorage:
