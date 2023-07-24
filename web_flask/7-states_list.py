@@ -6,7 +6,7 @@ from flask import Flask, render_template
 from models.state import State
 
 app = Flask(__name__)
-
+""" Flask application """
 
 @app.route("/states_list", strict_slashes=False)
 def states_list():
