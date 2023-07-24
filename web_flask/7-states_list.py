@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/states_list", strict_slashes=False)
 def states_list():
-    ''' Print State Page'''
+    '''Print State Page'''
     all_states = list(storage.all(State).values())
     all_states.sort(key=lambda x: x.name)
     ctxt = {
@@ -21,7 +21,7 @@ def states_list():
 
 @app.teardown_appcontext
 def flask_teardown(exc):
-    """ The flask request """
+    ''' The flask request ''' 
     storage.close()
 
 
