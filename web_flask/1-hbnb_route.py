@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # Flask applications to listen on port 50000
+""" A flask app to return hbnb """
 
 from flask import Flask
 
