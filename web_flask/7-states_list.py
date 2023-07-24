@@ -1,16 +1,11 @@
 #!/usr/bin/python3
 # Flask applications to listen on port 50000
 """ Flask app Number template """
-
+from models import storage
 from flask import Flask, render_template
+from models.state import State
 
 app = Flask(__name__)
-
-
-@app.route("/", strict_slashes=False)
-def hbnb_hello():
-    ''' print hello HBNB '''
-    return "Hello HBNB!"
 
 
 @app.route("/states_list", strict_slashes=False)
@@ -22,6 +17,7 @@ def states_list():
         'states': all_states
     }
     return render_template('7-states_list.html', **ctxt)
+
 
 @app.teardown_appcontext
 def flask_teardown(exc):
