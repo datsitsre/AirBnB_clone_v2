@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module defines a class to manage database storage for hbnb clone"""
 import os
+from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy import create_engine
 import urllib.parse
 
