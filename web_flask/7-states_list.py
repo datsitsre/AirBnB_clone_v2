@@ -1,16 +1,19 @@
 #!/usr/bin/python3
-""" Flask app Number template """
+""" Flask app Number template
+"""
 
 from models import storage
 from flask import Flask, render_template
 from models.state import State
 
 app = Flask(__name__)
-""" Flask application """
+""" Flask application
+"""
 
 @app.route("/states_list", strict_slashes=False)
 def states_list():
-    """ Print State Page """
+    """ Print State Page
+    """
     all_states = list(storage.all(State).values())
     all_states.sort(key=lambda x: x.name)
     ctxt = {
